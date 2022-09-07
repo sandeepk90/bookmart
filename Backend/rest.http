@@ -1,0 +1,102 @@
+###
+GET http://localhost:5000/api/users
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTc4MGE4NmE2NWQ3MzJiODk0M2NlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MDMwMTE0NiwiZXhwIjoxNjYwNTYwMzQ2fQ.ScfN5cP2JPvW6Ql5nESvU9mCGQKfmyUofPns5ys0BvQ
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "passward": "123456"
+}
+
+### 
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"sk2",
+    "email":"sk2@gmail.com",
+    "passward": "123456"
+}
+
+###
+POST http://localhost:5000/api/users
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTc4MGE4NmE2NWQ3MzJiODk0M2NlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MDMwMTE0NiwiZXhwIjoxNjYwNTYwMzQ2fQ.ScfN5cP2JPvW6Ql5nESvU9mCGQKfmyUofPns5ys0BvQ
+
+{
+    "username":"sk4",
+    "email":"sk4@gmail.com",
+    "passward": "123456",
+    "isAdmin":true
+}
+
+###
+GET http://localhost:5000/api/books/find/62efa753e5cf47173a42d6b2
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTc4MGE4NmE2NWQ3MzJiODk0M2NlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MDMwMTE0NiwiZXhwIjoxNjYwNTYwMzQ2fQ.ScfN5cP2JPvW6Ql5nESvU9mCGQKfmyUofPns5ys0BvQ
+
+
+###
+DELETE http://localhost:5000/api/books/62f3607e5fd8e7ee64db872a
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTc4MGE4NmE2NWQ3MzJiODk0M2NlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MDMwMTE0NiwiZXhwIjoxNjYwNTYwMzQ2fQ.ScfN5cP2JPvW6Ql5nESvU9mCGQKfmyUofPns5ys0BvQ
+
+###
+PUT http://localhost:5000/api/books/62efa753e5cf47173a42d6b2
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTc4MGE4NmE2NWQ3MzJiODk0M2NlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MDMwMTE0NiwiZXhwIjoxNjYwNTYwMzQ2fQ.ScfN5cP2JPvW6Ql5nESvU9mCGQKfmyUofPns5ys0BvQ
+
+{
+    "inStock":true
+}
+
+###
+POST http://localhost:5000/api/books
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTc4MGE4NmE2NWQ3MzJiODk0M2NlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MDMwMTE0NiwiZXhwIjoxNjYwNTYwMzQ2fQ.ScfN5cP2JPvW6Ql5nESvU9mCGQKfmyUofPns5ys0BvQ
+
+{
+    "title":"newbook",
+    "author": "newauthor",
+    "publisher": "newPublishr",
+    "desc": "newdesc",
+    "img": "fjsjfsa",
+    "categories": ["cat","new"],
+    "price": 20,
+    "inStock":true
+}
+
+
+###for user
+POST http://localhost:5000/api/users
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTc4MGE4NmE2NWQ3MzJiODk0M2NlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MDMwMTE0NiwiZXhwIjoxNjYwNTYwMzQ2fQ.ScfN5cP2JPvW6Ql5nESvU9mCGQKfmyUofPns5ys0BvQ
+
+{
+    "username":"admin",
+    "email":"admin@gmail.com",
+    "passward": "123456",
+    "isAdmin":true
+}
+
+
+### carts
+
+GET http://localhost:5000/api/carts
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTc4MGE4NmE2NWQ3MzJiODk0M2NlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MDMwMTE0NiwiZXhwIjoxNjYwNTYwMzQ2fQ.ScfN5cP2JPvW6Ql5nESvU9mCGQKfmyUofPns5ys0BvQ
+
+
+###orders
+
+POST http://localhost:5000/api/orders
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTc4MGE4NmE2NWQ3MzJiODk0M2NlYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MDMwMTE0NiwiZXhwIjoxNjYwNTYwMzQ2fQ.ScfN5cP2JPvW6Ql5nESvU9mCGQKfmyUofPns5ys0BvQ
+
+{
+    "userId": "Joi.string().required()",
+    "books": [{"bookId":"hello"},{"bookId":"world"}],
+    "amount": 45,
+    "address": "hello",
+    "status": "approved"
+}
